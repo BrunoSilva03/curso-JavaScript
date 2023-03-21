@@ -18,7 +18,7 @@
     <h1>Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM </strong>em JavaScript</p>
-    <div>Clique em mim</div>
+    <div id="msg">Clique em mim</div>
     <script>
         var p1 = window.document.getElementsByTagName('p')[1]
         window.document.write(p1.innerHTML)
@@ -27,7 +27,15 @@
         window.document.write(window.document.charset)
         window.document.write(window.navigator.appName)
         window.document.write(window.document.URL)
-        */
+        
+
+       var d = window.document.getElementById("msg")
+       d.innerText = 'Olá Jhow!'
+
+       */
+
+       var d = window.document.querySelector('div#msg')
+       d.style.color = "blue"
     </script>
 </body>
 </html>
