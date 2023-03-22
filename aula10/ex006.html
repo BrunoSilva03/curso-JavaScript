@@ -17,12 +17,16 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicou()" onmouseenter="entrar()" onmouseout="sair()">
+    <div id="area">
         Interaja...
     </div>
 
     <script>
         var a = window.document.getElementById('area')
+        a.addEventListener('click', clicou)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
 
         function clicou() {
             a.innerText = 'Clicou'
