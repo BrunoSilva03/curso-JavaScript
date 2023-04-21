@@ -1,18 +1,32 @@
-var inicio = window.document.getElementById('txtinicio');
-var fim = window.document.getElementById('txtfim');
-var passo = window.document.getElementById('txtpasso');
-var res = window.document.querySelector('div#res');
+function contar() {
+    let ini = document.getElementById('txti');
+    let fim = document.getElementById('txtf');
+    let passo = document.getElementById('txtp');
+    let res = document.getElementById('res');
 
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        window.alert('[ERRO] Faltam dados!')
+    } else {
+        res.innerHTML = 'Contando... ';
+        let i = Number(ini.value);
+        let f = Number(fim.value);
+        let p = Number(passo.value);
 
+        if (i < f) {
 
-function contar(inicio, fim, passo) {
-    if(passo <= 0) {
-        alert('Valor inválido, considerando passo = 1.');
-        passo = 1;
-
-        for(i = inicio; i < fim; i + passo) {
-            res.innerHTML = `${i}  + `;
+            for (let c = i; c <= f; c += p) {
+                res.innerHTML += `${c} \u{1F449}`
+            }
+            
+        } else {
+            for(let c = i; c >= f; c -= p) {
+                res.innerHTML += `${c} \u{1F449}`
+            }
+            
         }
-        res.innerHTML = ' = Fim';
+        res.innerHTML += `\u{1F3C1}`
     }
 }
+
+
+
