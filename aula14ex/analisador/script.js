@@ -7,4 +7,4 @@ function adicionar() {
     if (num <= 0 || num > 100) {
         window.alert('Número inválido');
     }
-} //só pra falar que fiz alguma coisa
+} 
